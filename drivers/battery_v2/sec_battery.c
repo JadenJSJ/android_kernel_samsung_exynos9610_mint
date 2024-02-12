@@ -361,7 +361,24 @@ static void sec_bat_get_charging_current_by_siop(struct sec_battery_info *batter
 				max_charging_current = 500;
 			}
 		} else {
-			max_charging_current = 1800; /* 1 step(70) */
+			// JSJ EDITS
+                        if (battery->siop_level == 15) { /* 3 step(0) */
+                                max_charging_current = 0;
+                        } else if (battery->siop_level == 16) {
+                                max_charging_current = 50;
+                        } else if (battery->siop_level == 17) {
+                                max_charging_current = 100;
+                        } else if (battery->siop_level == 18) {
+                                max_charging_current = 200;
+                        } else if (battery->siop_level == 19) {
+                                max_charging_current = 300;
+                        } else if (battery->siop_level == 20) {
+                                max_charging_current = 400;
+                        } else if (battery->siop_level == 21) {
+                                max_charging_current = 500;
+                        } else {
+                                max_charging_current = 1800; /* 1 step(70) */
+                        }
 		}
 
 		/* do forced set charging current */
