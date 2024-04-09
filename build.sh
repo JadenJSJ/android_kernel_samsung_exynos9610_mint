@@ -348,8 +348,8 @@ else
 	fi
 
 	BUILD_KERNEL_BRANCH='user'
-	LOCALVERSION=" - Mint-user"
-	export LOCALVERSION=" - Mint-user"
+	LOCALVERSION=" - Mint b6563a1 - KMask R65976974-kitsune 27001"
+	export LOCALVERSION=" - Mint b6563a1 - KMask R65976974-kitsune 27001"
 fi
 }
 
