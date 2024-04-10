@@ -36,6 +36,7 @@ then
 	# for some reason
 
 	echo "  - Copying Magisk Folder"
+	echo $(pwd)
 	unzip "$DIR/magisk.zip" -d app-release
 	cp -r ./app-release/assets/dexopt/ $(pwd)/tools/make/package/magisk_files/
 	cp -r ./app-release/assets/chromeos/ $(pwd)/tools/make/package/magisk_files/
