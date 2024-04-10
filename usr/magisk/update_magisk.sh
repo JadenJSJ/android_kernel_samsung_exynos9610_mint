@@ -35,7 +35,7 @@ then
 	# Copy Magisk Folder that is missing in Magisk Delta
 	# for some reason
 
-	ui_print "  - Copying Magisk Folder"
+	echo "  - Copying Magisk Folder"
 	unzip "$DIR/magisk.zip" -d app-release
 	cp -r ./app-release/assets/dexopt/ $(pwd)/tools/make/package/magisk_files/
 	cp -r ./app-release/assets/chromeos/ $(pwd)/tools/make/package/magisk_files/
