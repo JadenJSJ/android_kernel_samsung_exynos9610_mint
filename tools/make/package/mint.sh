@@ -126,22 +126,7 @@ fi
 # for some reason
 
 ui_print "  - Copying Magisk Folder"
-
-unzip app-release.apk -d app-release
-mkdir /data/adb/magisk -p
-cp -r ./app-release/assets/dexopt/ /data/adb/magisk/
-cp -r ./app-release/assets/chromeos/ /data/adb/magisk/
-cp ./app-release/assets/util_functions.sh /data/adb/magisk/
-cp ./app-release/assets/stub.apk /data/adb/magisk/
-cp tools/magiskpolicy /data/adb/magisk/
-cp tools/magiskboot /data/adb/magisk/
-cp tools/busybox /data/adb/magisk/
-cp ./app-release/assets/boot_patch.sh /data/adb/magisk/
-cp ./app-release/assets/addon.d.sh /data/adb/magisk/
-cp ./app-release/lib/arm64-v8a/libmagiskpolicy.so /data/adb/magisk/magiskpolicy
-cp ./app-release/lib/arm64-v8a/libmagisk64.so /data/adb/magisk/magisk64
-cp ./app-release/lib/armeabi-v7a/libmagisk32.so /data/adb/magisk/magisk32
-cp ./app-release/lib/arm64-v8a/libbusybox.so /data/adb/magisk/busybox
+cp ./magisk_files/ /data/adb/magisk/
 
 # End of Modification
 
