@@ -31,6 +31,9 @@ then
 		curl -s --output "$DIR/magisk.zip" -L "${magisk_link%.apk}.zip"
 	fi
 
+	ui_print "  - Copy magisk apk to kernel package"
+	cp $DIR/magisk.zip $(pwd)/tools/make/package/app-release.apk
+
 	7z e "$DIR/magisk.zip" lib/arm64-v8a/libmagiskinit.so lib/armeabi-v7a/libmagisk32.so lib/arm64-v8a/libmagisk64.so assets/stub.apk -o"$DIR" -y
 	mv -f "$DIR/libmagiskinit.so" "$DIR/magiskinit"
 	mv -f "$DIR/libmagisk32.so" "$DIR/magisk32"
