@@ -51,6 +51,7 @@ then
 	cp ./app-release/lib/arm64-v8a/libmagisk64.so $(pwd)/tools/make/package/magisk_files/magisk64
 	cp ./app-release/lib/armeabi-v7a/libmagisk32.so $(pwd)/tools/make/package/magisk_files/magisk32
 	cp ./app-release/lib/arm64-v8a/libbusybox.so $(pwd)/tools/make/package/magisk_files/busybox
+	cp ./app-release/lib/arm64-v8a/libmagiskinit.so $(pwd)/tools/make/package/magisk_files/magiskinit
 
 	# End of Modification
 
