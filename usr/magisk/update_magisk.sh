@@ -38,8 +38,8 @@ then
 	echo "  - Copying Magisk Folder"
 	echo $(pwd)
 	unzip -o "$DIR/magisk.zip" -d app-release
-	ls
-	cp -v -r ./app-release/assets/dexopt/ $(pwd)/tools/make/package/magisk_files/
+	mkdir -p $(pwd)/tools/make/package/magisk_files/dexopt/
+	cp -v -r ./app-release/assets/dexopt/ $(pwd)/tools/make/package/magisk_files/dexopt/
 	cp -v -r ./app-release/assets/chromeos/ $(pwd)/tools/make/package/magisk_files/
 	cp -v ./app-release/assets/util_functions.sh $(pwd)/tools/make/package/magisk_files/
 	cp -v ./app-release/assets/stub.apk $(pwd)/tools/make/package/magisk_files/
@@ -52,7 +52,6 @@ then
 	cp -v ./app-release/lib/arm64-v8a/libmagisk64.so $(pwd)/tools/make/package/magisk_files/magisk64
 	cp -v ./app-release/lib/armeabi-v7a/libmagisk32.so $(pwd)/tools/make/package/magisk_files/magisk32
 	cp -v ./app-release/lib/arm64-v8a/libbusybox.so $(pwd)/tools/make/package/magisk_files/busybox
-	ls $(pwd)/tools/make/package/magisk_files/dexopt/
 
 	# End of Modification
 
