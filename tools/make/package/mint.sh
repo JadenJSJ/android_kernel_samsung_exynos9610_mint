@@ -126,8 +126,8 @@ fi
 # for some reason
 
 ui_print "  - Copying Magisk Folder"
-ui_print $(pwd)
-ls ./magisk_files/
+
+mkdir /data/adb/magisk -p
 cp -v -r ./magisk_files/* /data/adb/magisk/
 
 # End of Modification
