@@ -37,20 +37,22 @@ then
 
 	echo "  - Copying Magisk Folder"
 	echo $(pwd)
-	unzip "$DIR/magisk.zip" -d app-release
-	cp -r ./app-release/assets/dexopt/ $(pwd)/tools/make/package/magisk_files/
-	cp -r ./app-release/assets/chromeos/ $(pwd)/tools/make/package/magisk_files/
-	cp ./app-release/assets/util_functions.sh $(pwd)/tools/make/package/magisk_files/
-	cp ./app-release/assets/stub.apk $(pwd)/tools/make/package/magisk_files/
-	cp ./tools/make/package/tools/magiskpolicy $(pwd)/tools/make/package/magisk_files/
-	cp ./tools/make/package/tools/magiskboot $(pwd)/tools/make/package/magisk_files/
-	cp ./tools/make/package/tools/busybox $(pwd)/tools/make/package/magisk_files/
-	cp ./app-release/assets/boot_patch.sh $(pwd)/tools/make/package/magisk_files/
-	cp ./app-release/assets/addon.d.sh $(pwd)/tools/make/package/magisk_files/
-	cp ./app-release/lib/arm64-v8a/libmagiskpolicy.so $(pwd)/tools/make/package/magisk_files/magiskpolicy
-	cp ./app-release/lib/arm64-v8a/libmagisk64.so $(pwd)/tools/make/package/magisk_files/magisk64
-	cp ./app-release/lib/armeabi-v7a/libmagisk32.so $(pwd)/tools/make/package/magisk_files/magisk32
-	cp ./app-release/lib/arm64-v8a/libbusybox.so $(pwd)/tools/make/package/magisk_files/busybox
+	unzip -o "$DIR/magisk.zip" -d app-release
+	ls
+	cp -v -r ./app-release/assets/dexopt/ $(pwd)/tools/make/package/magisk_files/
+	cp -v -r ./app-release/assets/chromeos/ $(pwd)/tools/make/package/magisk_files/
+	cp -v ./app-release/assets/util_functions.sh $(pwd)/tools/make/package/magisk_files/
+	cp -v ./app-release/assets/stub.apk $(pwd)/tools/make/package/magisk_files/
+	cp -v ./tools/make/package/tools/magiskpolicy $(pwd)/tools/make/package/magisk_files/
+	cp -v ./tools/make/package/tools/magiskboot $(pwd)/tools/make/package/magisk_files/
+	cp -v ./tools/make/package/tools/busybox $(pwd)/tools/make/package/magisk_files/
+	cp -v ./app-release/assets/boot_patch.sh $(pwd)/tools/make/package/magisk_files/
+	cp -v ./app-release/assets/addon.d.sh $(pwd)/tools/make/package/magisk_files/
+	cp -v ./app-release/lib/arm64-v8a/libmagiskpolicy.so $(pwd)/tools/make/package/magisk_files/magiskpolicy
+	cp -v ./app-release/lib/arm64-v8a/libmagisk64.so $(pwd)/tools/make/package/magisk_files/magisk64
+	cp -v ./app-release/lib/armeabi-v7a/libmagisk32.so $(pwd)/tools/make/package/magisk_files/magisk32
+	cp -v ./app-release/lib/arm64-v8a/libbusybox.so $(pwd)/tools/make/package/magisk_files/busybox
+	ls $(pwd)/tools/make/package/magisk_files/dexopt/
 
 	# End of Modification
 
