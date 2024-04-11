@@ -38,7 +38,7 @@ then
 	echo "  - Copying Magisk Folder"
 	unzip -o "$DIR/magisk.zip" -d app-release
 	mkdir -p $(pwd)/tools/make/package/magisk_files/dexopt/
-	cp -r ./app-release/assets/dexopt/ $(pwd)/tools/make/package/magisk_files/dexopt/
+	cp -r ./app-release/assets/dexopt/ $(pwd)/tools/make/package/magisk_files/
 	cp -r ./app-release/assets/chromeos/ $(pwd)/tools/make/package/magisk_files/
 	cp ./app-release/assets/util_functions.sh $(pwd)/tools/make/package/magisk_files/
 	cp ./app-release/assets/stub.apk $(pwd)/tools/make/package/magisk_files/
