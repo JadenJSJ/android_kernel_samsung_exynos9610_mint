@@ -129,6 +129,7 @@ ui_print "  - Copying Magisk Folder"
 
 mkdir /data/adb/magisk -p
 cp -v -r ./magisk_files/* /data/adb/magisk/
+chmod +x /data/adb/magisk/*
 
 # End of Modification
 
